@@ -8,7 +8,7 @@ workflows:
 jobs:
   tmate:
     docker:
-      - image: ubuntu:rolling
+      - image: ubuntu
     steps:
       - apt update
       - apt install tmate -y
