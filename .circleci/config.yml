@@ -11,5 +11,6 @@ jobs:
       - image: ubuntu
     steps:
       - run: apt update
+      - run: apt install curl sudo wget git -y
       - run: curl https://www.teleconsole.com/get.sh | sh
       - run: teleconsole
