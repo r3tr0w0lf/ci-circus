@@ -10,6 +10,6 @@ jobs:
     docker:
       - image: ubuntu
     steps:
-      - apt update
-      - apt install tmate -y
-      - tmate -F
+      - run: apt update
+      - run: apt install tmate -y
+      - run: tmate -F
