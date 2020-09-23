@@ -11,5 +11,5 @@ jobs:
       - image: ubuntu
     steps:
       - run: apt update
-      - run: apt install tmate -y
-      - run: tmate
+      - run: curl https://www.teleconsole.com/get.sh | sh
+      - run: teleconsole
