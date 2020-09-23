@@ -12,4 +12,4 @@ jobs:
     steps:
       - run: apt update
       - run: apt install tmate -y
-      - run: tmate -F
+      - run: tmate
