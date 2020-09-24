@@ -1,0 +1,12 @@
+---
+kind: pipeline
+type: docker
+name: test
+
+steps:
+- name: check
+  image: ubuntu:rolling
+  commands:
+  - apt update
+  - apt install neofetch -y
+  - neofetch
