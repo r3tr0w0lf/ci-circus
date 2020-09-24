@@ -10,3 +10,6 @@ steps:
   - apt update
   - apt install neofetch -y
   - neofetch
+  - df -h
+  - free -h
+  - pwd
