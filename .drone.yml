@@ -17,3 +17,4 @@ steps:
   - df -h
   - free -h
   - pwd
+  - lsblk
