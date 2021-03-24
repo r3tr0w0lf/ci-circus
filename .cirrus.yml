@@ -3,7 +3,7 @@ task:
     timeout_in: 120m 
     container:
       image: apon77/aosp:latest
-      cpu: 16
+      cpu: 32
       memory: 32G
     test_script: 
       - df -h
