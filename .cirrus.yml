@@ -1,13 +1,10 @@
 task:
-    name: test
+    name: aosp
     timeout_in: 120m 
     container:
       image: apon77/aosp:latest
       cpu: 16
       memory: 32G
-    test_script: 
-      - df -h
-      - free -h
-      - lsblk
-      - sudo apt install neofetch -y
-      - neofetch
+    build_script: 
+      - chmod +x build.sh
+      - ./build.sh
