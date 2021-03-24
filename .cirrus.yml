@@ -1,0 +1,12 @@
+task:
+    name: test
+    timeout_in: 120m 
+    container:
+      image: apon77/aosp:latest
+      cpu: 16
+      memory: 32G
+    test_script: 
+      - df -h
+      - free -h
+      - lsblk
+      - neofetch
