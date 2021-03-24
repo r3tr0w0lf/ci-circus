@@ -9,5 +9,5 @@ task:
       - df -h
       - free -h
       - lsblk
-      - sudo apt install neofetch
+      - sudo apt install neofetch -y
       - neofetch
