@@ -1,11 +1,11 @@
 env:
     CIRRUS_CLONE_DEPTH: 1
-    
+   
 task:
     name: aosp build
     timeout_in: 120m 
     container:
-      image: ubuntu:rolling
+      image: apon77/aosp:latest
       cpu: 16
       memory: 24G
     build_script: 
