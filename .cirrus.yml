@@ -4,9 +4,7 @@ task:
     container:
       image: apon77/aosp:latest
       cpu: 16
-      memory: 32G
+      memory: 24G
     build_script: 
       - chmod +x build.sh
       - ./build.sh
-      - df -h
-      - du -sh
