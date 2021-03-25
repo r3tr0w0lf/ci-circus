@@ -10,6 +10,12 @@ git clone https://github.com/mi-msm8937/android_device_xiaomi_ulysse -b lineage-
 git clone https://github.com/mi-msm8937/proprietary_vendor_xiaomi_ulysse -b lineage-17.1 --depth=1 vendor/xiaomi/ulysse
 #git clone https://github.com/mi-msm8937/android_kernel_xiaomi_msm8937-4.9 -b 11 --depth=1 kernel/xiaomi/msm8937-4.9
 git clone https://github.com/mi-msm8937/android_kernel_xiaomi_msm8937-4.9 -b 11 --depth=1 kernel/xiaomi/ulysse-4.9
+source build/envsetup.sh
 breakfast ulysse
-mka bacon -j32
+mka bacon -j32 &
+for (( ; ; ))
+do
+   du -sh
+   sleep 10m
+done
 
