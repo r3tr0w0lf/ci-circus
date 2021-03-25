@@ -1,8 +1,8 @@
 task:
-    name: aosp
+    name: aosp build
     timeout_in: 120m 
     container:
-      image: apon77/aosp:latest
+      image: ubuntu:rolling
       cpu: 16
       memory: 24G
     build_script: 
