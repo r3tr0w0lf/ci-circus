@@ -8,6 +8,7 @@ task:
       image: apon77/aosp:latest
       cpu: 8
       memory: 24G
-    build_script: 
+    build_script:
+      - df -h 
       - chmod +x build.sh
       - ./build.sh
