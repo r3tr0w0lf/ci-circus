@@ -9,5 +9,6 @@ task:
       cpu: 12
       memory: 24G
     build_script:
+      - df -h
       - chmod +x build.sh
       - ./build.sh
