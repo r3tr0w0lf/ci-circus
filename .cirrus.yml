@@ -6,8 +6,8 @@ task:
     timeout_in: 120m 
     container:
       image: apon77/aosp:latest
-      cpu: 12
-      memory: 24G
+      cpu: 8
+      memory: 32G
     build_script:
       - df -h
       - chmod +x build.sh
