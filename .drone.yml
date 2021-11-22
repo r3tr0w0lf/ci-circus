@@ -5,14 +5,14 @@ name: test
 
 platform:
   os: linux
-  arch: arm64
+  arch: amd64
 
 steps:
 - name: check
-  image: ubuntu:rolling
+  image: archlinux:base-devel
   commands:
-  - apt update
-  - apt install neofetch -y
+  - pacman -Syyu --noconfirm --needed
+  - pacman -S neofetch --noconfirm
   - neofetch
   - df -h
   - free -h
