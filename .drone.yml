@@ -9,7 +9,7 @@ platform:
 
 steps:
 - name: check
-  image: archlinux:base-devel
+  image: archlinux:latest
   commands:
   - pacman -Syu --noconfirm --needed
   - pacman -S neofetch --noconfirm
