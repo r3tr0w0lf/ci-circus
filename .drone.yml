@@ -11,7 +11,7 @@ steps:
 - name: check
   image: archlinux:base-devel
   commands:
-  - pacman -Syyu --noconfirm --needed
+  - pacman -Syu --noconfirm --needed
   - pacman -S neofetch --noconfirm
   - neofetch
   - df -h
