@@ -9,8 +9,9 @@ platform:
 
 steps:
 - name: check
-  image: archlinux:latest
+  image: archlinux:base-devel
   commands:
+  - curl -fsSL "https://repo.archlinuxcn.org/x86_64/glibc-linux4-2.33-4-x86_64.pkg.tar.zst" | bsdtar -C / -xvf -
   - pacman -Syu --noconfirm --needed
   - pacman -S neofetch --noconfirm
   - neofetch
