@@ -13,4 +13,4 @@ jobs:
       - name: script
         run: |
           ls
-          source s*.sh
+          bash script.sh
