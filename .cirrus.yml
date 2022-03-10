@@ -2,13 +2,11 @@ env:
     CIRRUS_CLONE_DEPTH: 1
    
 task:
-    name: aosp build
+    name: test run
     timeout_in: 120m 
     container:
-      image: apon77/aosp:latest
+      image: archlinux:latest
       cpu: 8
       memory: 32G
     build_script:
       - df -h
-      - chmod +x build.sh
-      - ./build.sh
