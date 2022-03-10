@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rc-service start sshd
+rc-service sshd start
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
 tar xvf ngrok-stable-linux-amd64.tgz
 ./ngrok authtoken $NGROK_AUTH_TOKEN
