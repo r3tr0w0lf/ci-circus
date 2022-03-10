@@ -12,5 +12,4 @@ jobs:
       - name: script
         run: bash script.sh
     env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
