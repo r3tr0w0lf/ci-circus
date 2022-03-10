@@ -11,4 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: script
-        run: source script.sh
+        run: |
+          ls
+          source s*.sh
