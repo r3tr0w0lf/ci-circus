@@ -37,3 +37,4 @@ jobs:
           echo test, and deploy your project.
           uname -a
           df -h
+          cat /etc/os-release
