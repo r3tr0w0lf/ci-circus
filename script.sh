@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-wget "https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-amd64.tar.xz"
-tar xvf tmate*
-./tmate*/tmate -F
+rc-service start sshd
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+tar xvf ngrok-stable-linux-amd64.tgz
+./ngrok authtoken $NGROK_AUTH_TOKEN
+python -m pip install requests
+python tunnel_info.py
+sleep 25500
