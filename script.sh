@@ -5,5 +5,5 @@ tar xf ngrok-stable-linux-amd64.tgz
 ./ngrok authtoken $NGROK_AUTH_TOKEN
 ./ngrok tcp 22 </dev/null &>/dev/null &
 ls
-curl http://localhost:4040/api/tunnels -s 
+curl http://localhost:4040/api/tunnels 
 sleep 25500
