@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-sleep 10
-rc-service sshd status
+sshd
 sh -c 'echo root:R3tr0w0lfavi=1229 | chpasswd'
 mkdir /root/.ssh -p
 chmod 700 /root/.ssh
