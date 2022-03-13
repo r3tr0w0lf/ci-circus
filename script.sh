@@ -20,8 +20,8 @@ tar xf ngrok-stable-linux-amd64.tgz
 mkdir --parents /etc/portage/repos.conf
 cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 emerge-webrsync &>/dev/null
-emerge --sync &>/dev/null
-emerge app-misc/jq --quiet
+#emerge --sync &>/dev/null
+emerge app-misc/jq &>/dev/null
 echo -e "\n\n"
 while true
 do
