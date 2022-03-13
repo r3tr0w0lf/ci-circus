@@ -7,7 +7,6 @@ mkdir /root/.ssh -p
 chmod 700 /root/.ssh
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK/HD4ykICHel8LtrbicOw7raeaczAvbLoztNUyiKsWF u0_a113@localhost" >> /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/*
-sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g;s/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sh -c 'echo root:R3tr0w0lfavi=1229 | chpasswd' &>/dev/null
 
 # NGROK SETUP
