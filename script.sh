@@ -15,6 +15,10 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz --quiet
 tar xf ngrok-stable-linux-amd64.tgz 
 ./ngrok authtoken $NGROK_AUTH_TOKEN &>/dev/null
 ./ngrok tcp 22 </dev/null &>/dev/null &
-sleep 3
-curl -s http://127.0.0.1:4040/api/tunnels 
-sleep 25500
+emerge app-misc/jq &>/dev/null
+echo -e "\n\n"
+while true
+do
+  curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g' | sed 's/,//g' 
+  sleep 3
+done
