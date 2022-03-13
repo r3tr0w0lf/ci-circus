@@ -24,6 +24,6 @@ emerge-webrsync &>/dev/null
 emerge app-misc/jq &>/dev/null
 while true
 do
-  curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g' | sed 's/,//g' 
-  sleep 3
+  curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
+  sleep 5
 done
