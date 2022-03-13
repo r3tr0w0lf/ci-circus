@@ -22,7 +22,6 @@ cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 emerge-webrsync &>/dev/null
 #emerge --sync &>/dev/null
 emerge app-misc/jq &>/dev/null
-echo -e "\n\n"
 while true
 do
   curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g' | sed 's/,//g' 
