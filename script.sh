@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+/usr/sbin/sshd -o PidFile=/run/sshd.pid -f /etc/ssh/sshd_config
 ps aux | grep -i sshd
 sh -c 'echo root:R3tr0w0lfavi=1229 | chpasswd'
 mkdir /root/.ssh -p
