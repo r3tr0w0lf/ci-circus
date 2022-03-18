@@ -15,6 +15,7 @@ jobs:
           echo "hi" > tag
       - name: test
         run: |
-          export TAG=$(echo tag)
+          export TAG="$(echo tag)"
+          echo $TAG
     env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
