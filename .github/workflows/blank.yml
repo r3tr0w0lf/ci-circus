@@ -1,5 +1,6 @@
 name: CI
 on:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -14,6 +15,6 @@ jobs:
           export KERNEL_TAG="hi"
       - name: test
         run: |
-          echo ${{ env.KERNEL_TAG }}
+          echo $KERNEL_TAG
     env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
