@@ -10,6 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: script
-        run: bash script.sh
+        run: |
+          export KERNEL_TAG="hi"
+      - name: test
+        run: |
+          echo ${{ env.KERNEL_TAG }}
     env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
