@@ -12,9 +12,10 @@ jobs:
       - uses: actions/checkout@master
       - name: script
         run: |
-          export KERNEL_TAG="hi"
+          export TAG="hi"
+          echo $TAG
       - name: test
         run: |
-          echo $KERNEL_TAG
+          echo $TAG
     env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
