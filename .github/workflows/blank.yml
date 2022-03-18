@@ -11,16 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: script
+        id: kerneltag
         run: |
-          echo "hi" > tag
+          echo "tag"
       - name: test
         run: |
-          export TAG="$(cat tag)"
-          echo $TAG
-      - name: Release
-        uses: softprops/action-gh-release@master
-        with:
-          files: tag
-          tag_name: $TAG
+          echo ${{ steps.kerneltag.outputs }}
     env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
