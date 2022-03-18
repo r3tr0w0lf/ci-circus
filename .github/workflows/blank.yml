@@ -13,8 +13,9 @@ jobs:
       - name: script
         id: kerneltag
         run: |
-          touch tag
-          echo "::set-output name=mytag::1229x0rzavi"
+          echo "1229x0rzavi" > tag
+          releasetag="$(cat tag)"
+          echo "::set-output name=mytag::$releasetag"
       - name: test
         run: |
           echo ${{ steps.kerneltag.outputs.mytag }}
