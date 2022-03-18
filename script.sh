@@ -21,6 +21,7 @@ cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 emerge-webrsync &>/dev/null
 #emerge --sync &>/dev/null
 #emerge app-misc/jq &>/dev/null
+emerge dev-vcs/git &>/dev/null
 emerge eselect-repository &>/dev/null
 eselect repository enable src_prepare-overlay &>/dev/null
 emerge --sync 
