@@ -52,3 +52,4 @@ kernel_prepare
 kernel_build
 kernel_package
 kernel_tag
+cd $workdir
