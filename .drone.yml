@@ -9,12 +9,11 @@ platform:
 
 steps:
 - name: check
-  image: archlinux:base-devel
+  image: x0rzavi/gentoo-kernel:latest
   commands:
-  - pacman -Syu --noconfirm --needed
-  - pacman -S neofetch --noconfirm
-  - neofetch
   - df -h
   - free -h
   - pwd
   - lsblk
+  - cat /proc/cpu | head -n 50
+  - uname -a
