@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: test
+name: build kernel
 
 platform:
   os: linux
@@ -11,9 +11,5 @@ steps:
 - name: check
   image: x0rzavi/gentoo-kernel:latest
   commands:
-  - df -h
-  - free -h
-  - pwd
-  - lsblk
-  - cat /proc/cpu | head -n 50
-  - uname -a
+    - source ./build.sh
+    - source ./upload.sh
