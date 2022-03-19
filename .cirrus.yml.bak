@@ -2,11 +2,12 @@ env:
     CIRRUS_CLONE_DEPTH: 1
    
 task:
-    name: test run
+    name: build kernel
     timeout_in: 120m 
     container:
-      image: archlinux:latest
+      image: x0rzavi/gentoo-kernel:latest
       cpu: 8
       memory: 32G
     build_script:
-      - df -h
+      - source ./build.sh
+      - source ./upload.sh
