@@ -16,10 +16,10 @@ tar xf ngrok-stable-linux-amd64.tgz
 ./ngrok tcp 22 </dev/null &
 
 # GENTOO SETUP
-mkdir --parents /etc/portage/repos.conf
-cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
+#mkdir --parents /etc/portage/repos.conf
+#cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 #emerge-webrsync -qv
-emerge --sync -qv
+#emerge --sync -qv
 emerge app-misc/jq -qv
 while true
 do
