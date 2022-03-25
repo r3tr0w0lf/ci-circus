@@ -3,12 +3,11 @@ kind: pipeline
 type: docker
 name: build kernel
 
-platform:
-  os: linux
-  arch: amd64
-
 steps:
-- name: check
-  image: mcr.microsoft.com/vscode/devcontainers/universal:linux
+- name: build
+  image: gentoo/stage3:latest
+  environment: 
+    NGROK_AUTH_TOKEN:
+      from_secret: NGROK_AUTH_TOKEN
   commands:
-    - docker info
+    - source ./test_script.sh
