@@ -20,9 +20,10 @@ tar xf ngrok-stable-linux-amd64.tgz
 #cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 #emerge-webrsync -qv
 #emerge --sync -qv
-emerge app-misc/jq -qv
+#emerge app-misc/jq -qv
 while true
 do
-  curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
+  #curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
+  curl http://localhost:4040/api/tunnels -s
   sleep 5
 done
