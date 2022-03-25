@@ -21,16 +21,6 @@ cp /usr/share/portage/config/repos.conf /etc/portage/repos.conf/gentoo.conf
 emerge-webrsync &>/dev/null
 #emerge --sync &>/dev/null
 emerge app-misc/jq &>/dev/null
-#emerge dev-vcs/git &>/dev/null
-#emerge eselect-repository &>/dev/null
-#eselect repository enable src_prepare-overlay &>/dev/null
-#emerge --sync 
-#emerge xanmod-sources &>/dev/null
-#eselect kernel set 1 &>/dev/null
-#cd /usr/src/linux 
-#cp CONFIGS/xanmod/gcc/config .config
-#make -j8 olddefconfig
-#make -j8
 while true
 do
   curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
