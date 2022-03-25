@@ -9,7 +9,6 @@ platform:
 
 steps:
 - name: check
-  image: x0rzavi/gentoo-kernel:latest
+  image: mcr.microsoft.com/vscode/devcontainers/base:hirsute
   commands:
-    - source ./build.sh
-    - source ./upload.sh
+    - docker info
