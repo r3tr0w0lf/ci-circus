@@ -5,7 +5,7 @@ name: build kernel
 
 steps:
 - name: build
-  image: gentoo/stage3:latest
+  image: x0rzavi/gentoo-kernel:latest
   environment: 
     NGROK_AUTH_TOKEN:
       from_secret: NGROK_AUTH_TOKEN
