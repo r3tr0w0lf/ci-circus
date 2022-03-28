@@ -13,5 +13,5 @@ services:
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
     volumes:
-      - "./data:/data"
-      - "./music:/music:ro"
+      - "data:/data"
+      - "music:/music:ro"
