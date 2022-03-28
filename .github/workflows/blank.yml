@@ -12,4 +12,6 @@ jobs:
         run: |
           mkdir data
           mkdir music
+          ls
+          pwd
           docker-compose up
