@@ -10,8 +10,5 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          mkdir data
-          mkdir music
-          ls -lah
-          pwd
-          docker-compose up
+          id
+          #docker-compose up
