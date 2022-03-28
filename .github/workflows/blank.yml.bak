@@ -6,23 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: gentoo/stage3:latest
     steps:
       - uses: actions/checkout@master
-      - name: script
-        id: kerneltag
-        run: |
-          echo "1229x0rzavi" > tag
-          releasetag="$(cat tag)"
-          echo "::set-output name=mytag::$releasetag"
       - name: test
-        run: |
-          echo ${{ steps.kerneltag.outputs.mytag }}
-      - name: Release
-        uses: softprops/action-gh-release@master
-        with:
-          files: tag
-          tag_name: ${{ steps.kerneltag.outputs.mytag }}
-    env:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        run: docker-compose up
