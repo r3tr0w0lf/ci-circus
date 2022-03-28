@@ -10,5 +10,4 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          id
-          #docker-compose up
+          docker-compose up
