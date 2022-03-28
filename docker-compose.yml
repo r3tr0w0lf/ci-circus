@@ -13,5 +13,5 @@ services:
       ND_SESSIONTIMEOUT: 24h
       ND_BASEURL: ""
     volumes:
-      - "/home/runner/work/ci-circus/ci-circus/data:/data"
+      #- "/home/runner/work/ci-circus/ci-circus/data:/data"
       - "/home/runner/work/ci-circus/ci-circus/music:/music:ro"
