@@ -9,4 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: test
-        run: docker-compose up
+        run: |
+          mkdir data
+          mkdir music
+          docker-compose up
