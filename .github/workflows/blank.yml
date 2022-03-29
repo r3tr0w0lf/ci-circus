@@ -10,6 +10,4 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          mkdir data
-          mkdir music
-          docker-compose up
+          cat /etc/fuse.conf
