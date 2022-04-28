@@ -12,3 +12,4 @@ jobs:
         run: |
           whoami
           pwd
+          id
