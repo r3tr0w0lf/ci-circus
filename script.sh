@@ -7,11 +7,14 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHzbb76/TEhlX8iPth0+ZppUmnXlKuY64iNqIn
 chmod 600 ~/.ssh/*
 echo "runner:1229" | sudo chpasswd 
 
+# TTYD SETUP
+docker run -it --rm -d -p 7681:7681 tsl0922/ttyd
+
 # NGROK SETUP
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --quiet
 tar xvf ngrok-v3-stable-linux-amd64.tgz
 ./ngrok config add-authtoken $NGROK_AUTHTOKEN
-./ngrok tcp 22 </dev/null &
+./ngrok http 7681 </dev/null &
 
 # SHOW URL
 while true
