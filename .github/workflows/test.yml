@@ -6,8 +6,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:latest
     steps:
       - uses: actions/checkout@master
       - name: test
