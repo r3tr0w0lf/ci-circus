@@ -8,7 +8,7 @@ chmod 600 ~/.ssh/*
 echo "runner:1229" | sudo chpasswd 
 
 # NGROK SETUP
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz --quiet
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --quiet
 tar xvf ngrok-stable-linux-amd64.tgz
 ./ngrok config add-authtoken $NGROK_AUTHTOKEN
 ./ngrok tcp 22 </dev/null &
