@@ -9,7 +9,7 @@ echo "runner:1229" | sudo chpasswd
 
 # NGROK SETUP
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --quiet
-tar xvf ngrok-stable-linux-amd64.tgz
+tar xvf ngrok-v3-stable-linux-amd64.tgz
 ./ngrok config add-authtoken $NGROK_AUTHTOKEN
 ./ngrok tcp 22 </dev/null &
 
