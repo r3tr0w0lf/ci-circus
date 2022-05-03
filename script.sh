@@ -5,9 +5,6 @@ mkdir ~/.ssh -p
 chmod 700 ~/.ssh
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHzbb76/TEhlX8iPth0+ZppUmnXlKuY64iNqInPntJix x0rzavi@gmail.com" > ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/*
-sudo sed -i 's/PasswordAuthentication yes/PasswordAuthentication no\nAuthenticationMethods publickey/' /etc/ssh/sshd_config
-sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
-sudo systemctl restart sshd
 echo "runner:1229" | sudo chpasswd
 
 # NGROK SETUP
