@@ -8,7 +8,8 @@ chmod 600 ~/.ssh/*
 echo "runner:1229" | sudo chpasswd 
 
 # TTYD SETUP
-docker run -it --rm -d -p 7681:7681 tsl0922/ttyd
+brew install ttyd
+ttyd bash </dev/null &
 
 # NGROK SETUP
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --quiet
