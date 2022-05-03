@@ -12,6 +12,5 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          cat /etc/ssh/sshd_config
           systemctl start sshd
           systemctl status sshd
