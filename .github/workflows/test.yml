@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          systemctl start sshd
+          sudo systemctl start sshd
           systemctl status sshd
