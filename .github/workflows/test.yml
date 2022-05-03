@@ -10,4 +10,7 @@ jobs:
       - uses: actions/checkout@master
       - name: test
         run: |
-          source script.sh
+          #source script.sh
+          whoami
+          pwd
+          cat /etc/ssh/sshd_config
