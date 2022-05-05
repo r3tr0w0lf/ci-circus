@@ -17,5 +17,5 @@ tar xvf ngrok-v3-stable-linux-amd64.tgz
 while true
 do
   curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
-  sleep 5
+  sleep 15
 done
