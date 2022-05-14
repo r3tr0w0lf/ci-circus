@@ -22,7 +22,7 @@ tar xvf ngrok-v3-stable-linux-amd64.tgz
 
 # SEND URL
 URL=curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
-curl --get --data-urlencode "chat_id=809977861" --data-urlencode "text=$URL" "https://api.telegram.org/bot$TOKEN/sendMessage"
+curl --get --data-urlencode "chat_id=809977861" --data-urlencode "text=$URL" "https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
 while true
 do
   #curl http://localhost:4040/api/tunnels -s | jq | grep "public_url" | awk -F ' ' '{ print $2 }' | sed 's/"//g;s/,//g;s/tcp:\/\///g;s/:/ -p/g'
