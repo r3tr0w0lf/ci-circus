@@ -7,6 +7,13 @@ echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHzbb76/TEhlX8iPth0+ZppUmnXlKuY64iNqIn
 chmod 600 ~/.ssh/*
 echo "runner:1229" | sudo chpasswd
 
+# NORDVPN SETUP
+sudo sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh)
+sudo nordvpn login --username $NORD_LOGIN --password $NORD_PASS
+sudo nordvpn set technology nordlynx
+sudo nordvpn set killswitch enabled
+sudo nordvpn connect p2p
+
 # NGROK SETUP
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz --quiet
 tar xvf ngrok-v3-stable-linux-amd64.tgz
