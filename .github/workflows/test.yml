@@ -13,3 +13,5 @@ jobs:
           source script.sh
         env:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
+          NORD_LOGIN: ${{ secrets.NORD_LOGIN }}
+          NORD_PASS: ${{ secrets.NORD_PASS }}
