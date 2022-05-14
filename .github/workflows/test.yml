@@ -15,3 +15,4 @@ jobs:
           NGROK_AUTHTOKEN: ${{ secrets.NGROK_AUTHTOKEN }}
           NORD_LOGIN: ${{ secrets.NORD_LOGIN }}
           NORD_PASS: ${{ secrets.NORD_PASS }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
