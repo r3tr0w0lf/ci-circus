@@ -8,7 +8,7 @@ chmod 600 ~/.ssh/*
 echo "runner:1229" | sudo chpasswd
 
 # NORDVPN SETUP
-wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh && sudo sh install.sh
+wget -qO https://downloads.nordcdn.com/apps/linux/install.sh && sudo sh install.sh
 sudo nordvpn login --username $NORD_LOGIN --password $NORD_PASS
 sudo nordvpn set technology nordlynx
 sudo nordvpn set killswitch enabled
